@@ -9,6 +9,7 @@
   "files": [
     "dist/**"
   ],
+  "sideEffects": false,
   "types": "dist/index.d.ts",
   "ava": {
     "extensions": [
