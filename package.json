@@ -5,6 +5,20 @@
   "module": "dist/fn-pipe.esm.js",
   "browser": "dist/fn-pipe.umd.js",
   "author": "Blake Knight <oss.ideas@gmail.com> (https://blakek.me/)",
+  "description": "🚰 Compose functions and promises to make a pipeline",
+  "bugs": {
+    "url": "https://github.com/blakek/fn-pipe/issues"
+  },
+  "homepage": "https://github.com/blakek/fn-pipe",
+  "keywords": [
+    "function",
+    "pipeline",
+    "promise"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blakek/fn-pipe.git"
+  },
   "license": "MIT",
   "files": [
     "dist/**"
