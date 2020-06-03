@@ -38,7 +38,7 @@ const getCompletedCount = fnPipe([
   todos => todos.length
 ], userId);
 
-console.log(getCompletedCount()); // 12
+getCompletedCount(); //» 12
 ```
 
 ## API
@@ -50,22 +50,6 @@ function fnPipe(
   functions: Function[] | symbol,
   initialValue?: symbol | any
 ): FnPipeReturn;
-```
-
-### `__`
-
-A placeholder flag indicating the value will be provided later.
-
-```js
-import { __, fnPipe } from 'fn-pipe';
-
-const limit = limit => array => array.slice(0, limit);
-const pluck = key => array => array.map(o => o[key]);
-
-const topTitles = fnPipe([limit(10), pluck('title')], __);
-
-const getImportantTodos = topTitles(todos);
-const getTopBooks = topTitles(books);
 ```
 
 ## Contributing
