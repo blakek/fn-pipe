@@ -1,29 +1,9 @@
-const __ = Symbol('fn-pipe argument placeholder');
-
-type FnPipeReturn = ((value: any) => void) | any;
-
-async function runFnPipe(
-  [fn, ...fns]: Function[],
-  initialValue: any
-): Promise<any> {
+export async function fnPipe<T, Fns extends Function[]>(
+  [fn, ...fns]: Fns,
+  initialValue?: any
+): Promise<T> {
   if (!fn) return initialValue;
-  return runFnPipe(fns, fn(await initialValue));
+  return fnPipe(fns, fn(await initialValue));
 }
 
-function fnPipe(
-  functions: Function[] | symbol,
-  initialValue?: symbol | any
-): FnPipeReturn {
-  if (functions === __) {
-    return (fns: Function[]): any => runFnPipe(fns, initialValue);
-  }
-
-  if (initialValue === __) {
-    return (value: any): any => runFnPipe(functions as Function[], value);
-  }
-
-  return runFnPipe(functions as Function[], initialValue);
-}
-
-export { __, fnPipe };
 export default fnPipe;
