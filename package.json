@@ -1,6 +1,6 @@
 {
   "name": "@blakek/fn-pipe",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "dist/fn-pipe.cjs.js",
   "module": "dist/fn-pipe.esm.js",
   "browser": "dist/fn-pipe.umd.js",
