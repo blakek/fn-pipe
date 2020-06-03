@@ -46,10 +46,7 @@ getCompletedCount(); //» 12
 ### `fnPipe`
 
 ```ts
-function fnPipe(
-  functions: Function[] | symbol,
-  initialValue?: symbol | any
-): FnPipeReturn;
+function fnPipe([fn, ...fns]: Function[], initialValue?: any): Promise<any>;
 ```
 
 ## Contributing
