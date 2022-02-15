@@ -2,6 +2,8 @@
 
 > 🚰 Compose functions and promises to make a pipeline
 
+⚠️ NOTE: Use [`@blakek/compose`](https://github.com/blakek/compose) instead. This package (`@blakek/fn-pipe`) is not currently maintained.
+
 Code can become complex when several functions wrap others or `reduce()` is
 abused for a list of funtions.
 
